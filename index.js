@@ -12,12 +12,10 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-// Your first API endpoint... 
 app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-// --- SOLUTION START ---
 
 app.get("/api/:date?", (req, res) => {
   let dateInput = req.params.date;
